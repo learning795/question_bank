@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題庫</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question p {
+            margin: 0;
+            font-size: 16px;
+            flex: 1;
+        }
+        .copy-btn {
+            margin-left: 15px;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>題目提問庫</h1>
+        <div class="question">
+            <p>1. 請簡述物質的三態及其轉變過程。</p>
+            <button class="copy-btn" onclick="copyToClipboard('請簡述物質的三態及其轉變過程。')">複製</button>
+        </div>
+        <div class="question">
+            <p>2. 試說明牛頓三大運動定律的內容。</p>
+            <button class="copy-btn" onclick="copyToClipboard('試說明牛頓三大運動定律的內容。')">複製</button>
+        </div>
+        <div class="question">
+            <p>3. 解釋光合作用的基本原理及其重要性。</p>
+            <button class="copy-btn" onclick="copyToClipboard('解釋光合作用的基本原理及其重要性。')">複製</button>
+        </div>
+        <div class="question">
+            <p>4. 分析全球暖化的原因及可能的解決方案。</p>
+            <button class="copy-btn" onclick="copyToClipboard('分析全球暖化的原因及可能的解決方案。')">複製</button>
+        </div>
+        <div class="footer">
+            <p>© 2025 問題庫</p>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("題目已複製到剪貼板！");
+            }).catch(err => {
+                alert("複製失敗，請手動複製。");
+            });
+        }
+    </script>
+</body>
+</html>
